@@ -1,0 +1,35 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/rust
+{
+	"name": "kanidm-dev-container",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": ["./docker-compose.devcontainer.yml"],
+    "service": "kanidm-dev",
+    "workspaceFolder": "/home/vscode",
+	"customizations": {
+        "vscode": {
+          "extensions": [
+            "gruntfuggly.todo-tree",
+            "asciidoctor.asciidoctor-vscode",
+            "rust-lang.rust-analyzer",
+            "serayuzgur.crates",
+            "tamasfe.even-better-toml",
+            "vadimcn.vscode-lldb",
+            "esbenp.prettier-vscode",
+            "dbaeumer.vscode-eslint",
+            "angular.ng-template",
+            "lucono.karma-test-explorer"
+          ]
+        }
+      },
+      "remoteEnv": {
+        "USER_UID": "$(id -u)",
+        "USER_GID": "$(id -g)"
+      },
+      "buildArgs": [
+        "--build-arg",
+        "USER_UID=$(id -u)",
+        "--build-arg",
+        "USER_GID=$(uid -g)"
+      ]
+}

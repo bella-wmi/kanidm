@@ -1,0 +1,11 @@
+services:
+  kanidm-dev:
+      build:
+        context: ..
+        dockerfile: .devcontainer/Dockerfile
+        target: base
+      working_dir: /home/vscode
+      user: "${USER_UID:-1000}:${USER_GID:-1000}"
+      volumes:
+        - ..:/home/vscode
+      command: /bin/sh -c "while sleep 100000; do :; done"
