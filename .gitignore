@@ -18,6 +18,7 @@ tools/orca/example_profiles/small/orca-edited.toml
 .vscode/
 # webui things we don't need
 *.d.ts
+.vscode-server/
 
 server/web_ui/*/pkg/*.js
 server/web_ui/*/pkg/*.wasm
@@ -39,3 +40,15 @@ scripts/oauth_proxy/client.secret
 scripts/oauth_proxy/envfile
 # local config things
 .envrc
+
+.ssh/
+
+.gnupg/
+
+.config/
+
+.devcontainer/.gitconfig
+
+.gitconfig
+
+.bash_history
