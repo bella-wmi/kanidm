@@ -73,7 +73,7 @@ const ARGON2_MAX_P_COST: u32 = 1;
 pub enum CryptoError {
     Hsm,
     HsmContextMissing,
-    OpenSSL(u64),
+    OpenSSL(u32),
     Md4Disabled,
     Argon2,
     Argon2Version,
