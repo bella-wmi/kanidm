@@ -138,7 +138,7 @@ hex = "^0.4.3"
 http = "0.2.11"
 hyper = { version = "0.14.27", features = ["full"] }
 hyper-tls = "0.5.0"
-idlset = "^0.2.4"
+idlset = { git = "https://github.com/kanidm/idlset.git", rev = "1116de9" }
 image = { version = "0.24.7", default-features = false, features = [
     "gif",
     "jpeg",
